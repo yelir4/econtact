@@ -9,6 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="bin\publish\Application Files\econtact_1_0_0_0\econtact.deps.json.deploy" />
+    <None Include="bin\publish\Application Files\econtact_1_0_0_0\econtact.dll.deploy" />
+    <None Include="bin\publish\Application Files\econtact_1_0_0_0\econtact.dll.manifest" />
+    <None Include="bin\publish\Application Files\econtact_1_0_0_0\econtact.exe.deploy" />
+    <None Include="bin\publish\Application Files\econtact_1_0_0_0\econtact.runtimeconfig.json.deploy" />
+    <None Include="bin\publish\Application Files\econtact_1_0_0_0\Launcher.exe.deploy" />
+    <None Include="bin\publish\econtact.application" />
+    <None Include="bin\publish\setup.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
