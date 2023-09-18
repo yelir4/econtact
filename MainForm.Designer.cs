@@ -1,8 +1,6 @@
-﻿/// loosely following https://www.youtube.com/playlist?list=PLBLPjjQlnVXVLh8nQWR9M5ADH1iZ6cX5D
-/// 09/14/2023 yelir
-namespace econtact
+﻿namespace econtact
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -48,13 +46,21 @@ namespace econtact
             btnUpdate = new Button();
             btnDelete = new Button();
             btnClear = new Button();
+            openForm2Button = new Button();
             pictureBox2 = new PictureBox();
             dataGridView1 = new DataGridView();
             lbData = new Label();
             tbSearch = new TextBox();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            toolExit = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            toolAbout = new ToolStripMenuItem();
+            openForm1Button = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -188,6 +194,8 @@ namespace econtact
             btnAdd.TabIndex = 15;
             btnAdd.Text = "add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            btnAdd.MouseLeave += btnAdd_MouseLeave;
             // 
             // btnUpdate
             // 
@@ -217,6 +225,13 @@ namespace econtact
             btnClear.TabIndex = 18;
             btnClear.Text = "clear";
             btnClear.UseVisualStyleBackColor = true;
+            // 
+            // openForm2Button
+            // 
+            openForm2Button.Location = new Point(0, 0);
+            openForm2Button.Name = "openForm2Button";
+            openForm2Button.Size = new Size(75, 23);
+            openForm2Button.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -253,11 +268,59 @@ namespace econtact
             tbSearch.Size = new Size(126, 23);
             tbSearch.TabIndex = 22;
             // 
-            // Form1
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(907, 24);
+            menuStrip1.TabIndex = 23;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolExit });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "&File";
+            // 
+            // toolExit
+            // 
+            toolExit.Name = "toolExit";
+            toolExit.Size = new Size(93, 22);
+            toolExit.Text = "E&xit";
+            toolExit.Click += toolExit_Click;
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolAbout });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "&Help";
+            // 
+            // toolAbout
+            // 
+            toolAbout.Name = "toolAbout";
+            toolAbout.Size = new Size(107, 22);
+            toolAbout.Text = "&About";
+            toolAbout.Click += toolAbout_Click;
+            // 
+            // openForm1Button
+            // 
+            openForm1Button.Location = new Point(505, 127);
+            openForm1Button.Name = "openForm1Button";
+            openForm1Button.Size = new Size(75, 23);
+            openForm1Button.TabIndex = 24;
+            openForm1Button.Text = "openForm1";
+            openForm1Button.UseVisualStyleBackColor = true;
+            openForm1Button.Click += openForm1Button_Click;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(907, 450);
+            Controls.Add(openForm1Button);
             Controls.Add(tbSearch);
             Controls.Add(lbData);
             Controls.Add(dataGridView1);
@@ -280,11 +343,15 @@ namespace econtact
             Controls.Add(lbContact);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Name = "Form1";
-            Text = "econtact001";
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "MainForm";
+            Text = "econtact, 003";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -308,9 +375,16 @@ namespace econtact
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnClear;
+        private Button openForm2Button;
         private PictureBox pictureBox2;
         private DataGridView dataGridView1;
         private Label lbData;
         private TextBox tbSearch;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem toolExit;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem toolAbout;
+        private Button openForm1Button;
     }
 }
